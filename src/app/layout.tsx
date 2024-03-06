@@ -11,7 +11,7 @@ const fontSans = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Hoang Trung's Blog",
+  title: 'htdev',
   description:
     'Personal blog of Hoang Trung. Software engineer, web developer, and open-source contributor.'
 }
@@ -19,12 +19,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <head>
+        <link rel="icon" href="/logo.png" />
+      </head>
       <body
-        className={cn(
-          'min-h-screen bg-background font-sans antialiased',
-          fontSans.variable
-        )}
+        className={cn('bg-background font-sans antialiased', fontSans.variable)}
       >
         <ThemeProvider
           attribute="class"
